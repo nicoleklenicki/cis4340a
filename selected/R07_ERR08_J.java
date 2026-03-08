@@ -1,13 +1,14 @@
 //Rule: ERR08
+//Compliant Version
 
 public class R07_ERR08_J {
     public static void main(String[] args) {
         String input = null;
 
-        try {
+        if (input != null) {
             System.out.println(input.length());
-        } catch (NullPointerException e) {
-            System.out.println("Null pointer caught");
+        } else {
+            System.out.println("Input was null");
         }
     }
 }
