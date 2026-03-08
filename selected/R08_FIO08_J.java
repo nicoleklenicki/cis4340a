@@ -1,4 +1,5 @@
 //Rule: FIO08
+//Compliant Version
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -9,9 +10,9 @@ public class R08_FIO08_J {
         byte[] data = {(byte) 0x41, (byte) 0xFF};
         InputStream in = new ByteArrayInputStream(data);
 
-        byte b;
-        while ((b = (byte) in.read()) != -1) {
-            System.out.println(b);
+        int dataRead;
+        while ((dataRead = in.read()) != -1) {
+            System.out.println(dataRead);
         }
     }
 }
