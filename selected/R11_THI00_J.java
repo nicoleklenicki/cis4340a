@@ -1,4 +1,5 @@
 //Rule: THI00
+//Compliant Version
 
 public class R11_THI00_J {
 
@@ -10,6 +11,6 @@ public class R11_THI00_J {
 
     public static void main(String[] args) {
         MyThread t = new MyThread();
-        t.run();   // WRONG: calling run() directly
+        t.start();   // CORRECT: start the thread
     }
 }
